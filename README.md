@@ -31,3 +31,9 @@ anotad los problemas que os encontráis y sus soluciones. Y recordad: Paciencia!
         - Qué archivos contienen el código del servidor? Qué archivos contienen el código de los tests?
         - Localiza en el código las siguientes anotaciones de Spring Boot: `@RestController`, `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Busca su significado. Dónde se colocan estas anotacione en este código? Para qué crees que sirven? Qué ocurre si las borras?
         - Dónde se guarda la información en este backend? Utiliza una base de datos? Debería utilizarla? Por qué?
+
+
+### Referencias
+
+- https://spring.io/guides/tutorials/spring-boot-kotlin/
+- https://www.baeldung.com/kotlin/spring-boot-testing
