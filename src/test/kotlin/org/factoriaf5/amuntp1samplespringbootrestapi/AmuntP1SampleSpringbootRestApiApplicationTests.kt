@@ -8,9 +8,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
@@ -35,7 +33,7 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun returnsTheExistingCoders() {
+    fun `returns the existing coders`() {
         addTestCoders()
         mockMvc.perform(get("/coders"))
             .andExpect(status().isOk)
@@ -51,7 +49,7 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun allowsToCreateANewCoder() {
+    fun `allows to create a new coder`() {
         mockMvc.perform(
             post("/coders")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -70,7 +68,7 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun allowsToFindACoderById() {
+    fun `allows to find a coder by id`() {
         val coder: Coder = coderRepository.save(Coder("Marta", "Kotlin"))
         mockMvc.perform(get("/coders/" + coder.id))
             .andExpect(status().isOk)
@@ -80,14 +78,14 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun returnsAnErrorIfTryingToGetACoderThatDoesNotExist() {
+    fun `returns an error if trying to get a coder that does not exist`() {
         mockMvc.perform(get("/coders/1"))
             .andExpect(status().isNotFound())
     }
 
     @Test
     @Throws(Exception::class)
-    fun allowsToDeleteACoderById() {
+    fun `allows to delete a coder by id`() {
         val coder: Coder = coderRepository.save(Coder("Marta", "Kotlin"))
         mockMvc.perform(delete("/coders/" + coder.id))
             .andExpect(status().isOk)
@@ -106,7 +104,7 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun returnsAnErrorIfTryingToDeleteACoderThatDoesNotExist() {
+    fun `returns an error if trying to delete a coder that does not exist`() {
         mockMvc.perform(delete("/coders/1"))
             .andExpect(status().isNotFound())
     }
@@ -114,7 +112,7 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun allowsToModifyACoder() {
+    fun `allows to modify a coder`() {
         val coder: Coder = coderRepository.save(Coder("Yeraldin", "Java"))
         mockMvc.perform(
             put("/coders")
@@ -129,7 +127,7 @@ class AmuntP1SampleSpringbootRestApiApplicationTests(@Autowired val mockMvc: Moc
 
     @Test
     @Throws(Exception::class)
-    fun returnsAnErrorWhenTryingToModifyACoderThatDoesNotExist() {
+    fun `returns an error when trying to modify a coder that does not exist`() {
         addTestCoders()
         mockMvc.perform(
             put("/coders")
