@@ -2,6 +2,10 @@
 
 Este repositorio contiene el código de una API REST implementada con SpringBoot
 
+## Cosas importantes:
+   - El código del proyecto está contenido en la carpeta `src`
+   - Los comandos de Gradle pueden ejecutarse desde el menú "Gradle" de la derecha 
+   - Cuando "arrancamos" el servidor, deberíamos ver algo como esto en la consola "Run" de IntelliJ ![](docs/server.png)
 
 ## Instrucciones
 
@@ -12,7 +16,6 @@ anotad los problemas que os encontráis y sus soluciones. Y recordad: Paciencia!
     - Lanzad el servidor usando IntelliJ
     - Probad a lanzar el servidor desde línea de comandos usando el comando `bootRun` de Gradle
 2. `build`
-    - Lanzad los los tests del proyecto usando IntelliJ
     - Lanzad los tests del proyecto usando la línea de comandos con el comando `build` de Gradle
 
 3. `application.properties`
@@ -31,6 +34,7 @@ anotad los problemas que os encontráis y sus soluciones. Y recordad: Paciencia!
         - Qué archivos contienen el código del servidor? Qué archivos contienen el código de los tests?
         - Localiza en el código las siguientes anotaciones de Spring Boot: `@RestController`, `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Busca su significado. Dónde se colocan estas anotacione en este código? Para qué crees que sirven? Qué ocurre si las borras?
         - Dónde se guarda la información en este backend? Utiliza una base de datos? Debería utilizarla? Por qué?
+        - Lanzad los los tests del proyecto usando IntelliJ
 
 
 ### Referencias
