@@ -6,7 +6,9 @@ Este repositorio contiene el código de una API REST implementada con SpringBoot
    - El código del proyecto está contenido en la carpeta `src`
    - Los comandos de Gradle pueden ejecutarse desde el menú "Gradle" de la derecha 
    - Cuando "arrancamos" el servidor, deberíamos ver algo como esto en la consola "Run" de IntelliJ ![](docs/server.png)
-
+   - Al comenzar, la base de datos está vacía. Podéis añadir datos usando peticiones POST.
+   - Para crear una nueva coder usando el método POST, deberemos incluír en el body de la petición los datos de la nueva coder en formato JSON, por ejemplo: ![](docs/postman.png)
+   - 
 ## Instrucciones
 
 En grupo, intentad hacer las siguientes tareas. Buscad en Google, preguntad a otros grupos y a vuestras profes y, sobre todo,
